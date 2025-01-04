@@ -20,6 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback(
       (timeStamp) {
+        // Redirects to Dashboard screen after 3 seconds
         Future.delayed(Duration(seconds: 3)).then((v) {
           if (mounted) {
             context.replaceRoute(const DashboardRoute());
